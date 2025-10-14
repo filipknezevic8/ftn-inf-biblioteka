@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/pregled/pregled.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1 href="index.html" class="title">OnlineLib</h1>
+        <ul class="nav-links">
+            <li><a href="../contact/contact.html">Kontakt</a></li>
+            <li><a href="pregled.html" class="active">Pregled knjiga</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <div class="content">
+        <div class="tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Br</th>
+                        <th>Naziv</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaKnjiga"></tbody>
+            </table>
+        </div>
+        <div class="forma">
+            <form class="knjigaForm">
+                <label for="naziv">Naziv:</label>
+                <input type="text" id="naziv" name="naziv"><br>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id"><br>
+                <label for="tip">Tip:</label>
+                <input type="text" id="tip" name="tip"><br>
+                <label for="slika">Slika:</label>
+                <input type="text" id="slika" name="slika"><br>
+                <button type="submit" id="btnDodaj">Dodaj</button>
+            </form>
+        </div>
+    </div>
+    <script src="pregled.js"></script>
+</body>
+</html>

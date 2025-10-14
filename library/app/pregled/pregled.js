@@ -1,0 +1,12 @@
+'use strict';
+
+class Knjiga {
+    constructor(id, naziv, datumStampanja, url, opis, popularnost) {
+        this.id = id;
+        this.naziv = naziv;
+        this.datumStampanja = datumStampanja;
+        this.url = url;
+        this.opis = opis;
+        this.popularnost = popularnost;
+    }
+}
