@@ -68,7 +68,35 @@ function obrisiKnjigu(index) {
     popuniTabelu();
 }
 
+function handleForm() {
+    const forma = document.querySelector('.knjigaForm');
+    forma.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const naziv = document.querySelector('#naziv').value.trim();
+        const id = document.querySelector('#id').value.trim();
+        const tip = document.querySelector('#tip').value.trim();
+        const url = document.querySelector('#slika').value.trim();
+
+        const novaKnjiga = new Knjiga(
+            id,
+            naziv,
+            "",          // datumStampanja (nije u formi)
+            url,
+            "",          // opis (nije u formi)
+            1,           // popularnost (podrazumevano)
+            tip
+        );
+
+        knjige.push(novaKnjiga);
+        sacuvajKnjige();
+        popuniTabelu();
+        forma.reset();
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     ucitajKnjige();
     popuniTabelu();
+    handleForm();
 });
